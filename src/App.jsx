@@ -15,10 +15,31 @@ const projects = [
       'perfectpunch.gif'
     ],
     github: 'https://github.com/Archerman1/PerfectPunch',
-    demo: 'https://devpost.com/software/perfectpunch'
+    demo: 'https://devpost.com/software/perfectpunch',
+    hackathon: 'Hacklytics Winner 🏆'
 },
 {
-  id: 2,
+  "id": 2,
+  "title": "SLAM Algorithm 🚗",
+  "description": "The RACECAR project from the MIT Beaver Works Summer Institute demonstrates my skills in autonomous vehicle programming and control systems. I integrated sensors like cameras, depth sensors, and 2D LIDAR to enable environmental perception and obstacle navigation. This project involved machine learning techniques, advanced control theory, and real-time system optimization for autonomous driving.",
+  "skills": [
+    "Python",
+    "OpenCV",
+    "AruCo",
+    "Linux",
+    "PID",
+    "Autonomous Vehicle Programming",
+    "Control Systems",
+    "Machine Learning",
+    "Sensor Integration",
+    "Real-Time Systems"
+  ],
+  "images": [
+    "slam.gif"
+  ]
+},
+{
+  id: 3,
   title: 'SafeWay 🛣️',
   description: 'SafeWay is a navigation app that prioritizes safety by providing routes that avoid high-crime areas, poorly lit streets, and damaged roads. It uses data from government websites to calculate optimal routes based on user preferences for safety, walkability, lighting, and efficiency.',
   skills: ['Python', 'Flask', 'MongoDB', 'PyMongo', 'HTML5', 'CSS3', 'JavaScript', 'Mapbox API', 'Docker', 'Terraform'],
@@ -26,10 +47,11 @@ const projects = [
     'safeway.gif'
   ],
   github: 'https://github.com/CalebBunch/hackGT11',
-  demo: 'https://devpost.com/software/saferoute-2iyzml'
+  demo: 'https://devpost.com/software/saferoute-2iyzml',
+  hackathon: 'HackGT 11 Winner 🏆'
 },
 {
-  id: 3,
+  id: 4,
   title: 'ClubBuddy 👥',
   description: 'ClubBuddy is a club management app designed for students to join clubs at their school or university, manage club assignments, and track their participation. Advisors have a separate UI to manage student rosters, create meetings, and monitor club activities. Developed in Swift, it uses Firebase for authentication and MySQL for data storage.',
   skills: ['Swift', 'Firebase', 'MySQL', 'Xcode', 'UI/UX Design'],
@@ -38,6 +60,21 @@ const projects = [
   ],
   github: 'https://github.com/agshruti12/BRCT1?tab=readme-ov-file',
   demo: 'https://www.youtube.com/watch?v=zLklrt5ntvo'
+},
+{
+  "id": 5,
+  "title": "Automatic Door Opener 🔑",
+  "description": "In this ECE discovery project, I designed an automatic door opener using Arduino and a servo-powered rack and pinion system. The system is controlled remotely through a Bluefruit LE module and a mobile phone via Bluetooth. The project enhanced my skills in electronics, 3D design, and programming while developing a functional, hands-free device.",
+  "skills": [
+    "Arduino",
+    "Electronics",
+    "3D Design (SolidWorks)",
+    "Bluetooth Communication",
+    "Soldering"
+  ],
+  "images": [
+    "door_opener_1.jpg"
+  ]
 }
 ];
 
@@ -463,7 +500,14 @@ function App() {
                 <div className="project-image">
                   <img src={project.images[0]} alt={project.title} />
                 </div>
-                <h3>{project.title}</h3>
+                <div className="project-title-container">
+                  <h3>{project.title}</h3>
+                  {project.hackathon && (
+                    <div className="hackathon-tag">
+                      {project.hackathon}
+                    </div>
+                  )}
+                </div>
                 <p>{project.description}</p>
                 <div className="project-skills">
                   {project.skills.map(skill => (

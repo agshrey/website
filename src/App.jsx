@@ -344,7 +344,7 @@ function App() {
             <p>
               <center>
                 hi! i'm shrey, a computer engineering major at georgia tech. i like coding a bit, so i've built this website to showcase my projects. 
-                my interests lie in cv/ml, ai, swe, and pretty much any other buzzword that's relevant! also i love meeting new people, so feel free to reach out ☕️!
+                my interests lie in cv/ml, ai, swe, and fintech! also i love meeting new people, so feel free to reach out ☕️!
               </center>
             </p>
             <div className="skills">

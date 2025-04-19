@@ -48,7 +48,7 @@ const projects = [
   ],
   github: 'https://github.com/CalebBunch/hackGT11',
   demo: 'https://devpost.com/software/saferoute-2iyzml',
-  hackathon: 'HackGT 11 Winner 🏆'
+  hackathon: 'HackGT Winner 🏆'
 },
 {
   id: 4,

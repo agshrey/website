@@ -21,7 +21,7 @@ const projects = [
 {
   "id": 2,
   "title": "SLAM Algorithm 🚗",
-  "description": "The RACECAR project from the MIT Beaver Works Summer Institute demonstrates my skills in autonomous vehicle programming and control systems. I integrated sensors like cameras, depth sensors, and 2D LIDAR to enable environmental perception and obstacle navigation. This project involved machine learning techniques, advanced control theory, and real-time system optimization for autonomous driving.",
+  "description": "This project implements a Simultaneous Localization and Mapping (SLAM) algorithm using Python, OpenCV, and ArUco markers. The algorithm allows an autonomous vehicle to navigate and map its environment in real-time. It utilizes computer vision techniques to detect and track ArUco markers, enabling the vehicle to build a map of its surroundings while simultaneously determining its position within that map.",
   "skills": [
     "Python",
     "OpenCV",
@@ -64,7 +64,7 @@ const projects = [
 {
   "id": 5,
   "title": "Automatic Door Opener 🔑",
-  "description": "In this ECE discovery project, I designed an automatic door opener using Arduino and a servo-powered rack and pinion system. The system is controlled remotely through a Bluefruit LE module and a mobile phone via Bluetooth. The project enhanced my skills in electronics, 3D design, and programming while developing a functional, hands-free device.",
+  "description": "This project is an automatic door opener that uses an Arduino microcontroller and a Bluetooth module to control the door lock. The system allows users to unlock the door using a mobile app, providing convenience and security. The project includes hardware components such as a servo motor for the lock mechanism, and the software is developed using Arduino IDE.",
   "skills": [
     "Arduino",
     "Electronics",

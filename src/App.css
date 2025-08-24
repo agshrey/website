@@ -530,6 +530,33 @@ h2::after {
   transition: all 0.3s ease;
 }
 
+.project-card.featured {
+  border: 2px solid transparent;
+  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+              linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4) border-box;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+}
+
+.project-card.featured:hover {
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.3);
+  transform: translateY(-12px);
+}
+
+.featured-tag {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 0 1rem 0 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
 .project-image {
   width: 100%;
   height: 200px;

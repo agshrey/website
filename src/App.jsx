@@ -7,7 +7,27 @@ import './App.css'
 // Sample project data with skills
 const projects = [
   {
-    id: 1,
+    "id": 1,
+    "title": "VibeCheck 👾",
+    "description": "A VS Code extension that promotes mindful coding practices by requiring developers to explain their code before pasting or using autocomplete features. VibeCheck integrates with AI-powered feedback systems to evaluate code explanations and provides a comprehensive learning experience.",
+    "skills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "VS Code API",
+      "Hugging Face",
+      "CodeBERT",
+      "Supabase",
+    ],
+    "images": [
+      "vibecheck_gif.gif"
+    ],
+    "github": "https://github.com/agshrey/vibecheck-extension",
+    "demo": "https://drive.google.com/file/d/1Xty3GuPn1YYJmczMqFZJr_5uGvyHo1V0/view?usp=sharing",
+    "featured": true
+  },
+  {
+    id: 2,
     title: 'PerfectPunch 🥊',
     description: 'PerfectPunch is an AI-driven boxing training system that leverages computer vision and machine learning to analyze a boxers punching form, speed, accuracy, and injury risk in real-time. It aims to revolutionize boxing training by providing data-driven insights that enhance performance and prevent injuries, all without the need for wearables.',
     skills: ['Python', 'Django', 'OpenCV', 'MediaPipe', 'PyTorch', 'Taipy', 'NumPy', 'Pandas', 'Matplotlib', 'HTML5', 'CSS3', 'JavaScript'],
@@ -19,7 +39,7 @@ const projects = [
     hackathon: 'Hacklytics Winner 🏆'
 },
 {
-  "id": 2,
+  "id": 3,
   "title": "SLAM Algorithm 🚗",
   "description": "This project implements a Simultaneous Localization and Mapping (SLAM) algorithm using Python, OpenCV, and ArUco markers. The algorithm allows an autonomous vehicle to navigate and map its environment in real-time. It utilizes computer vision techniques to detect and track ArUco markers, enabling the vehicle to build a map of its surroundings while simultaneously determining its position within that map.",
   "skills": [
@@ -39,7 +59,7 @@ const projects = [
   ]
 },
 {
-  id: 3,
+  id: 4,
   title: 'SafeWay 🛣️',
   description: 'SafeWay is a navigation app that prioritizes safety by providing routes that avoid high-crime areas, poorly lit streets, and damaged roads. It uses data from government websites to calculate optimal routes based on user preferences for safety, walkability, lighting, and efficiency.',
   skills: ['Python', 'Flask', 'MongoDB', 'PyMongo', 'HTML5', 'CSS3', 'JavaScript', 'Mapbox API', 'Docker', 'Terraform'],
@@ -51,7 +71,7 @@ const projects = [
   hackathon: 'HackGT Winner 🏆'
 },
 {
-  id: 4,
+  id: 5,
   title: 'ClubBuddy 👥',
   description: 'ClubBuddy is a club management app designed for students to join clubs at their school or university, manage club assignments, and track their participation. Advisors have a separate UI to manage student rosters, create meetings, and monitor club activities. Developed in Swift, it uses Firebase for authentication and MySQL for data storage.',
   skills: ['Swift', 'Firebase', 'MySQL', 'Xcode', 'UI/UX Design'],
@@ -62,7 +82,7 @@ const projects = [
   demo: 'https://www.youtube.com/watch?v=zLklrt5ntvo'
 },
 {
-  "id": 5,
+  "id": 6,
   "title": "Automatic Door Opener 🔑",
   "description": "This project is an automatic door opener that uses an Arduino microcontroller and a Bluetooth module to control the door lock. The system allows users to unlock the door using a mobile app, providing convenience and security. The project includes hardware components such as a servo motor for the lock mechanism, and the software is developed using Arduino IDE.",
   "skills": [
@@ -108,11 +128,11 @@ const experiences = [
   },
   {
     id: 1,
-    title: 'Incoming Software Engineering Intern',
+    title: 'Software Engineering Intern',
     company: 'CarMax 🚗',
     timeline: 'Summer 2025',
-    description: 'Incoming...',
-    image: 'carmax_gif.gif'
+    description: 'Developed ADF pipelines and Azure Functions for data processing across 500+ dealerships. Accelerated data flow by 35% through query optimization and Snowflake-to-Blob transformations.',
+    image: 'carmax.jpeg'
   }
 ];
 
@@ -485,7 +505,7 @@ function App() {
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
-                className={`project-card ${clickedProjectId === project.id ? 'expanding' : ''}`}
+                className={`project-card ${clickedProjectId === project.id ? 'expanding' : ''} ${project.featured ? 'featured' : ''}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ 
                   opacity: 1, 
@@ -497,6 +517,11 @@ function App() {
                 transition={{ duration: 0.3 }}
                 onClick={() => handleProjectClick(project)}
               >
+                {project.featured && (
+                  <div className="featured-tag">
+                    ⭐ Featured
+                  </div>
+                )}
                 <div className="project-image">
                   <img src={project.images[0]} alt={project.title} />
                 </div>

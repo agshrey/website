@@ -519,7 +519,7 @@ function App() {
               >
                 {project.featured && (
                   <div className="featured-tag">
-                    ⭐ Featured
+                    ⭐ Recent
                   </div>
                 )}
                 <div className="project-image">
